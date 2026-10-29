@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yo Soy Esmeraldas | Gran Feria de Emprendimiento</title>
+  
+  <!-- Fuente Poppins desde Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root {
+      --verde-esmeraldas: #009640;
+      --amarillo-esmeraldas: #ffed00;
+      --azul-esmeraldas: #1f3a6e;
+      --naranja-esmeraldas: #e94e1b;
+    }
+    body {
+      font-family: 'Poppins', sans-serif !important;
+    }
+    .bg-brand-green { background-color: var(--verde-esmeraldas); }
+    .text-brand-green { color: var(--verde-esmeraldas); }
+    .border-brand-green { border-color: var(--verde-esmeraldas); }
+    .bg-brand-yellow { background-color: var(--amarillo-esmeraldas); }
+    .text-brand-yellow { color: var(--amarillo-esmeraldas); }
+    .bg-brand-blue { background-color: var(--azul-esmeraldas); }
+    .text-brand-blue { color: var(--azul-esmeraldas); }
+    .border-brand-blue { border-color: var(--azul-esmeraldas); }
+    .bg-brand-orange { background-color: var(--naranja-esmeraldas); }
+    .text-brand-orange { color: var(--naranja-esmeraldas); }
+    .border-brand-orange { border-color: var(--naranja-esmeraldas); }
+    .nav-link.active { color: var(--verde-esmeraldas); font-weight: 700; }
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: var(--naranja-esmeraldas);
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="bg-stone-50 text-slate-800 font-sans antialiased selection:bg-[#ffed00] selection:text-[#1f3a6e] relative">
+
+  <!-- Header / Navegación -->
+  <header class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md z-50 border-b border-slate-200 shadow-sm transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="#evento" class="flex items-center gap-3 group py-1">
+          <!-- Isologo de la Prefectura -->
+          <div class="w-12 h-12 rounded-2xl bg-white flex items-center justify-center p-1 shadow-md border-2 border-slate-100 flex-shrink-0 group-hover:scale-105 transition-transform overflow-hidden">
+            <img src="https://i.ibb.co/gbnwZNT1/logo.png" alt="Isologo Prefectura de Esmeraldas" class="w-full h-full object-contain">
+          </div>
+          <div class="flex flex-col">
+            <span class="font-black text-lg sm:text-xl tracking-tight text-[#1f3a6e] leading-none">
+              YO SOY <span class="text-[#009640]">ESMERALDAS</span>
+            </span>
+            <span class="text-[10px] font-extrabold tracking-widest text-[#e94e1b] uppercase mt-1">
+              FERIA DE EMPRENDIMIENTO
+            </span>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="#evento" class="nav-link relative text-slate-700 hover:text-brand-green text-sm font-semibold transition-colors py-1">Inicio</a>
+          <a href="#quienes-participan" class="nav-link relative text-slate-700 hover:text-brand-green text-sm font-semibold transition-colors py-1">Quiénes participan</a>
+          <a href="#inscripcion" class="nav-link relative text-slate-700 hover:text-brand-green text-sm font-semibold transition-colors py-1">Inscripción</a>
+          <a href="#ubicacion" class="nav-link relative text-slate-700 hover:text-brand-green text-sm font-semibold transition-colors py-1">Ubicación</a>
+        </nav>
+
+        <div class="hidden md:flex items-center">
+          <a href="#inscripcion" class="bg-brand-green hover:bg-[#007a33] text-white px-5 py-2.5 rounded-full font-bold text-sm shadow-md hover:shadow-lg transition-all flex items-center gap-2 border-b-2 border-green-800">
+            <span>Inscribir mi negocio</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-btn" class="text-slate-700 hover:text-brand-blue p-2 rounded-lg">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+      <a href="#evento" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-semibold text-slate-800 hover:bg-slate-100">Inicio</a>
+      <a href="#quienes-participan" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-semibold text-slate-800 hover:bg-slate-100">Quiénes participan</a>
+      <a href="#inscripcion" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-semibold text-slate-800 hover:bg-slate-100">Inscripción</a>
+      <a href="#ubicacion" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-semibold text-slate-800 hover:bg-slate-100">Ubicación</a>
+      <a href="#inscripcion" class="block w-full text-center bg-brand-green text-white font-bold py-3 rounded-xl mt-4">Inscribirme ahora</a>
+    </div>
+  </header>
+
+  <!-- Sección 1: El Evento (Inicio) -->
+  <section id="evento" class="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden min-h-[90vh] flex items-center">
+    <div class="absolute inset-0 z-0">
+      <img src="https://i.ibb.co/pNFwYRQ/image.png" alt="Playa y Malecón Las Palmas Esmeraldas" class="w-full h-full object-cover object-center" />
+      <div class="absolute inset-0 bg-slate-900/50 backdrop-blur-[2px]"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-brand-blue font-extrabold text-xs uppercase tracking-wider shadow-md border-2 border-brand-yellow">
+            <span class="w-2.5 h-2.5 rounded-full bg-brand-orange animate-pulse"></span>
+            <span>GRAN CONVOCATORIA ABIERTA</span>
+          </div>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1] drop-shadow-md">
+            Impulsamos el talento y orgullo de nuestra tierra.
+          </h1>
+          <p class="text-lg text-slate-100 leading-relaxed font-medium drop-shadow max-w-2xl">
+            La feria <strong class="text-white font-bold">Yo Soy Esmeraldas</strong> es el gran escaparate para emprendedores, creativos, artesanos y productores locales. ¡Muestra tu talento, impulsa tus ventas y conecta con la provincia!
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+            <div class="bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-white/40 shadow-lg flex items-center gap-3">
+              <div class="p-2.5 bg-brand-green/10 text-brand-green rounded-lg">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="text-[11px] font-bold text-slate-500 uppercase tracking-wider">Lugar</p>
+                <p class="font-extrabold text-brand-blue text-sm">Malecón Las Palmas</p>
+              </div>
+            </div>
+            <div class="bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-white/40 shadow-lg flex items-center gap-3">
+              <div class="p-2.5 bg-brand-orange/10 text-brand-orange rounded-lg">
+                <i data-lucide="calendar" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="text-[11px] font-bold text-slate-500 uppercase tracking-wider">Fecha</p>
+                <p class="font-extrabold text-brand-blue text-sm">Domingo 22 de Noviembre</p>
+              </div>
+            </div>
+            <div class="bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-white/40 shadow-lg flex items-center gap-3">
+              <div class="p-2.5 bg-brand-blue/10 text-brand-blue rounded-lg">
+                <i data-lucide="clock" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="text-[11px] font-bold text-slate-500 uppercase tracking-wider">Horario</p>
+                <p class="font-extrabold text-brand-blue text-sm">Desde las 10:00 AM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="bg-[#15284f] p-6 sm:p-8 rounded-3xl border-2 border-[#ffed00] shadow-2xl text-white relative">
+            <div class="flex items-center justify-between mb-6 border-b border-slate-700 pb-4">
+              <div>
+                <h3 class="text-xl font-extrabold text-white">Tiempo restante</h3>
+                <p class="text-xs font-semibold text-slate-200">para el cierre de inscripciones</p>
+              </div>
+              <span class="bg-[#ffed00] text-[#1f3a6e] text-xs font-black px-3 py-1.5 rounded-full uppercase shadow">¡CUPOS LIMITADOS!</span>
+            </div>
+            <div class="grid grid-cols-4 gap-2 text-center my-6">
+              <div class="bg-[#0f172a] p-3 rounded-xl border border-slate-600 shadow-inner">
+                <span id="timer-days" class="block text-2xl sm:text-3xl font-black text-[#ffed00]">00</span>
+                <span class="text-[11px] uppercase font-black text-white tracking-wider">DÍAS</span>
+              </div>
+              <div class="bg-[#0f172a] p-3 rounded-xl border border-slate-600 shadow-inner">
+                <span id="timer-hours" class="block text-2xl sm:text-3xl font-black text-white">00</span>
+                <span class="text-[11px] uppercase font-black text-white tracking-wider">HORAS</span>
+              </div>
+              <div class="bg-[#0f172a] p-3 rounded-xl border border-slate-600 shadow-inner">
+                <span id="timer-minutes" class="block text-2xl sm:text-3xl font-black text-white">00</span>
+                <span class="text-[11px] uppercase font-black text-white tracking-wider">MIN</span>
+              </div>
+              <div class="bg-[#0f172a] p-3 rounded-xl border border-slate-600 shadow-inner">
+                <span id="timer-seconds" class="block text-2xl sm:text-3xl font-black text-[#e94e1b]">00</span>
+                <span class="text-[11px] uppercase font-black text-white tracking-wider">SEG</span>
+              </div>
+            </div>
+            <div class="space-y-3 pt-2">
+              <a href="#inscripcion" class="block w-full text-center bg-[#e94e1b] hover:bg-[#d13f14] text-white font-extrabold py-4 px-6 rounded-xl shadow-lg transition-all text-base border-b-2 border-red-950">Asegurar mi Stand Ahora</a>
+              <p class="text-xs text-center font-bold text-white flex items-center justify-center gap-1.5">
+                <i data-lucide="check-circle" class="w-4 h-4 text-[#009640]"></i>
+                <span>Sin costo de inscripción previa</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección 2: Quiénes Participan -->
+  <section id="quienes-participan" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-xs font-black uppercase tracking-widest text-brand-orange mb-2">Diversidad y Talento</h2>
+        <h3 class="text-3xl sm:text-4xl font-extrabold text-brand-blue">¿Quiénes forman parte de la feria?</h3>
+        <p class="text-slate-600 mt-3">Descubre los tipos de productos, servicios y emprendimientos que pueden inscribirse.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-stone-50 border border-slate-200 rounded-2xl p-6 hover:shadow-xl transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-orange-100 text-brand-orange flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <i data-lucide="utensils" class="w-6 h-6"></i>
+          </div>
+          <span class="text-[11px] font-bold text-brand-orange bg-orange-50 px-2.5 py-1 rounded-md">Gastronomía</span>
+          <h4 class="font-extrabold text-brand-blue text-xl mt-3">Comida Típica y Dulces</h4>
+          <p class="text-slate-600 text-sm mt-2 leading-relaxed">Preparaciones tradicionales, Encocao o Encocaos, cocadas artesanales, conservas y delicias esmeraldeñas.</p>
+        </div>
+
+        <div class="bg-stone-50 border border-slate-200 rounded-2xl p-6 hover:shadow-xl transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 text-brand-green flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <i data-lucide="palette" class="w-6 h-6"></i>
+          </div>
+          <span class="text-[11px] font-bold text-brand-green bg-emerald-50 px-2.5 py-1 rounded-md">Artesanías & Arte</span>
+          <h4 class="font-extrabold text-brand-blue text-xl mt-3">Artesanías, Tejidos y Manualidades</h4>
+          <p class="text-slate-600 text-sm mt-2 leading-relaxed">Productos tejidos a mano, instrumentos tradicionales (Marimba), accesorios en damagua, bisutería y concha marina.</p>
+        </div>
+
+        <div class="bg-stone-50 border border-slate-200 rounded-2xl p-6 hover:shadow-xl transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-blue-100 text-brand-blue flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <i data-lucide="sparkles" class="w-6 h-6"></i>
+          </div>
+          <span class="text-[11px] font-bold text-brand-blue bg-blue-50 px-2.5 py-1 rounded-md">Cosmética</span>
+          <h4 class="font-extrabold text-brand-blue text-xl mt-3">Cosmética Natural & Cuidado</h4>
+          <p class="text-slate-600 text-sm mt-2 leading-relaxed">Aceites de coco 100% vírgenes, jabones artesanales, bálsamos, cremas corporales y estética natural.</p>
+        </div>
+
+        <div class="bg-stone-50 border border-slate-200 rounded-2xl p-6 hover:shadow-xl transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-yellow-100 text-yellow-700 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <i data-lucide="leaf" class="w-6 h-6"></i>
+          </div>
+          <span class="text-[11px] font-bold text-yellow-800 bg-yellow-50 px-2.5 py-1 rounded-md">Agroindustria</span>
+          <h4 class="font-extrabold text-brand-blue text-xl mt-3">Derivados de Coco, Cacao y Frutos</h4>
+          <p class="text-slate-600 text-sm mt-2 leading-relaxed">Chocolates orgánicos, derivados del cacao fino de aroma, snacks de plátano y productos agrícolas procesados.</p>
+        </div>
+
+        <div class="bg-[#1f3a6e] border border-slate-700 rounded-2xl p-6 hover:shadow-xl transition-all group text-white col-span-1 sm:col-span-2 lg:col-span-2 shadow-md">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-12 h-12 rounded-xl bg-[#ffed00] text-[#1f3a6e] flex items-center justify-center font-black text-xl group-hover:scale-110 transition-transform">+</div>
+            <span class="text-xs font-black text-[#ffed00] uppercase tracking-widest">ABIERTO A TODOS</span>
+          </div>
+          <h4 class="font-extrabold text-2xl text-white mt-2">¡Y mucho más!</h4>
+          <p class="text-white font-medium text-sm mt-2 leading-relaxed max-w-xl">
+            ¿Tu emprendimiento es diferente o combina varios sectores? Calzado, vestimenta, servicios creativos, tecnología o novedades locales... <strong class="text-[#ffed00]">¡También puedes postular tu stand!</strong>
+          </p>
+          <div class="mt-5">
+            <a href="#inscripcion" class="inline-flex items-center gap-2 text-[#ffed00] hover:text-white font-extrabold text-sm underline underline-offset-4">
+              <span>Consultar en el formulario</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección 3: Inscripción (Formulario local con confirmación en pantalla) -->
+  <section id="inscripcion" class="py-20 bg-stone-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
+        <div class="bg-brand-blue p-6 sm:p-10 text-white relative">
+          <div class="relative z-10">
+            <span class="bg-brand-yellow text-brand-blue font-extrabold text-xs px-3 py-1 rounded-full uppercase">Paso a Paso</span>
+            <h2 class="text-3xl font-extrabold mt-3">Formulario de Inscripción para Emprendedores</h2>
+            <p class="text-slate-300 text-sm mt-1">Completa los datos requeridos para postular por un stand en el evento.</p>
+          </div>
+        </div>
+
+        <div class="bg-emerald-50 border-b border-emerald-100 p-4 px-6 sm:px-10 flex flex-wrap items-center justify-between gap-4 text-xs font-semibold text-emerald-900">
+          <div class="flex items-center gap-2">
+            <i data-lucide="map-pin" class="w-4 h-4 text-brand-green"></i>
+            <span><strong>Lugar:</strong> Malecón Las Palmas</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i data-lucide="calendar" class="w-4 h-4 text-brand-orange"></i>
+            <span><strong>Fecha:</strong> Domingo 22 de Noviembre</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i data-lucide="clock" class="w-4 h-4 text-brand-blue"></i>
+            <span><strong>Horario:</strong> Desde las 10:00 AM</span>
+          </div>
+        </div>
+
+        <form id="registration-form" class="p-6 sm:p-10 space-y-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-xs font-extrabold text-slate-700 uppercase tracking-wider mb-2">Nombre Completo *</label>
+              <input type="text" required placeholder="Ej. Ana Valencia" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-green text-sm">
+            </div>
+            <div>
+              <label class="block text-xs font-extrabold text-slate-700 uppercase tracking-wider mb-2">Nombre del Emprendimiento *</label>
+              <input type="text" required placeholder="Ej. Co Cosmetic Esmeraldas" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-green text-sm">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-xs font-extrabold text-slate-700 uppercase tracking-wider mb-2">Número de Teléfono / WhatsApp *</label>
+              <input type="tel" required placeholder="Ej. 0939392312" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-green text-sm">
+            </div>
+            <div>
+              <label class="block text-xs font-extrabold text-slate-700 uppercase tracking-wider mb-2">Correo Electrónico *</label>
+              <input type="email" required placeholder="Ej. tu_correo@gmail.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-green text-sm">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-xs font-extrabold text-slate-700 uppercase tracking-wider mb-2">Categoría del Producto *</label>
+              <select required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-green text-sm bg-white">
+                <option value="">Selecciona una opción</option>
+                <option value="gastronomia">Gastronomía y Alimentos</option>
+                <option value="artesanias">Artesanías, Tejidos y Manualidades</option>
+                <option value="cosmetica">Cosmética & Cuidado Personal</option>
+                <option value="agro">Agroindustria Local</option>
+                <option value="otro">Otro sector / Novedades</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-extrabold text-slate-700 uppercase tracking-wider mb-2">Foto de tu Emprendimiento / Producto *</label>
+              <input type="file" accept="image/*" required class="w-full px-3 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-green text-xs file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-xs file:font-bold file:bg-emerald-50 file:text-brand-green hover:file:bg-emerald-100 bg-white">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-extrabold text-slate-700 uppercase tracking-wider mb-2">Descripción del Producto o Servicio *</label>
+            <textarea rows="3" required placeholder="Describe brevemente tus productos..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-green text-sm"></textarea>
+          </div>
+
+          <div class="pt-2">
+            <button type="submit" class="w-full bg-brand-green hover:bg-[#007a33] text-white font-extrabold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all text-base border-b-2 border-green-900 flex items-center justify-center gap-2">
+              <i data-lucide="send" class="w-5 h-5"></i>
+              <span>Enviar mi Postulación</span>
+            </button>
+          </div>
+        </form>
+
+        <div id="success-message" class="hidden p-10 text-center bg-emerald-50 space-y-4">
+          <div class="w-16 h-16 bg-brand-green text-white rounded-full flex items-center justify-center mx-auto text-2xl shadow-md">
+            <i data-lucide="check" class="w-8 h-8"></i>
+          </div>
+          <h3 class="text-2xl font-extrabold text-brand-blue">¡Inscripción Recibida con Éxito!</h3>
+          <p class="text-slate-600 text-sm max-w-md mx-auto">Hemos registrado tus datos y la foto de tu emprendimiento correctamente. Nuestro equipo se pondrá en contacto contigo muy pronto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección 4: Ubicación y Mapa -->
+  <section id="ubicacion" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-xs font-black uppercase tracking-widest text-brand-green mb-2">¿Cómo llegar?</h2>
+        <h3 class="text-3xl sm:text-4xl font-extrabold text-brand-blue">Ubicación Exacta del Evento</h3>
+        <p class="text-slate-600 mt-3">Te esperamos en el corazón turístico de la ciudad frente al mar (Plus Code: X8RR+3HV).</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-5 space-y-6">
+          <div class="bg-stone-50 border border-slate-200 p-6 rounded-3xl shadow-sm space-y-4">
+            <div class="flex items-start gap-4">
+              <div class="p-3 bg-brand-green/10 text-brand-green rounded-2xl flex-shrink-0">
+                <i data-lucide="map-pin" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h4 class="font-extrabold text-brand-blue text-lg">Malecón Las Palmas</h4>
+                <p class="text-slate-600 text-sm mt-1">Esmeraldas, Ecuador. Código Plus: X8RR+3HV.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 pt-2 border-t border-slate-200">
+              <div class="p-3 bg-brand-orange/10 text-brand-orange rounded-2xl flex-shrink-0">
+                <i data-lucide="navigation" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h4 class="font-extrabold text-brand-blue text-lg">Acceso y Parqueo</h4>
+                <p class="text-slate-600 text-sm mt-1">Amplias zonas de estacionamiento público disponible y fácil acceso vehicular y peatonal.</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://www.google.com/maps/search/?api=1&query=X8RR%2B3HV+Esmeraldas" target="_blank" class="block w-full text-center bg-brand-blue hover:bg-[#15284f] text-white font-extrabold py-4 px-6 rounded-2xl shadow-md transition-all text-sm border-b-2 border-blue-950 flex items-center justify-center gap-2">
+            <i data-lucide="external-link" class="w-5 h-5 text-brand-yellow"></i>
+            <span>Abrir en Google Maps (X8RR+3HV)</span>
+          </a>
+        </div>
+
+        <div class="lg:col-span-7">
+          <div class="rounded-3xl overflow-hidden border-4 border-white shadow-2xl h-[400px] sm:h-[450px] w-full bg-slate-200">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.298275322976!2d-79.66114862348574!3d0.9905499990141018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ffd5a7c5b3575ed%3A0x1d52d9b62fefbfbf!2sMalec%C3%B3n%20Las%20Palmas!5e0!3m2!1ses!2sec!4v1700000000000!5m2!1ses!2sec" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-brand-blue text-white py-12 border-t-4 border-brand-yellow">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center p-1 border-2 border-[#ffed00] overflow-hidden">
+            <img src="https://i.ibb.co/gbnwZNT1/logo.png" alt="Isologo Prefectura de Esmeraldas" class="w-full h-full object-contain">
+          </div>
+          <span class="font-black text-xl tracking-tight">YO SOY <span class="text-[#ffed00]">ESMERALDAS</span></span>
+        </div>
+        <p class="text-xs text-slate-400">© 2026 Yo Soy Esmeraldas. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Chatbot Flotante Widget -->
+  <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+    
+    <!-- Ventana del Chatbot -->
+    <div id="floating-chatbot" class="hidden w-[340px] sm:w-[380px] bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col mb-4 transition-all">
+      
+      <!-- Header del Chatbot -->
+      <div class="bg-brand-blue p-4 text-white flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full bg-brand-green flex items-center justify-center text-white text-base shadow border border-brand-yellow">
+            🤖
+          </div>
+          <div>
+            <h4 class="font-extrabold text-sm leading-tight">Asistente Yo Soy Esmeraldas</h4>
+            <p class="text-[10px] text-emerald-400 font-semibold flex items-center gap-1">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              En línea - Preguntas Frecuentes
+            </p>
+          </div>
+        </div>
+        <button onclick="toggleChatbot()" class="text-slate-300 hover:text-white p-1">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Historial de Conversación -->
+      <div id="chat-messages" class="h-[280px] p-4 overflow-y-auto space-y-3 bg-stone-50 text-xs">
+        <div class="flex items-start gap-2">
+          <div class="w-7 h-7 rounded-full bg-brand-blue text-white flex items-center justify-center font-bold flex-shrink-0 text-[10px]">YS</div>
+          <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-200 text-slate-700">
+            ¡Hola! Selecciona cualquiera de las siguientes preguntas para darte la información al instante:
+          </div>
+        </div>
+      </div>
+
+      <!-- Menú de Preguntas Preconfiguradas -->
+      <div class="p-3 bg-white border-t border-slate-200 space-y-1.5 max-h-[180px] overflow-y-auto">
+        <button onclick="askQuestion('participar')" class="w-full text-left text-xs bg-slate-100 hover:bg-brand-green hover:text-white text-slate-700 font-medium p-2 rounded-xl transition-all border border-slate-200">
+          ¿Qué emprendimientos pueden participar?
+        </button>
+        <button onclick="askQuestion('pequeno')" class="w-full text-left text-xs bg-slate-100 hover:bg-brand-green hover:text-white text-slate-700 font-medium p-2 rounded-xl transition-all border border-slate-200">
+          ¿Si soy un emprendimiento pequeño puedo participar?
+        </button>
+        <button onclick="askQuestion('hasta_cuando')" class="w-full text-left text-xs bg-slate-100 hover:bg-brand-green hover:text-white text-slate-700 font-medium p-2 rounded-xl transition-all border border-slate-200">
+          ¿Hasta cuándo me puedo inscribir?
+        </button>
+        <button onclick="askQuestion('costo')" class="w-full text-left text-xs bg-slate-100 hover:bg-brand-green hover:text-white text-slate-700 font-medium p-2 rounded-xl transition-all border border-slate-200">
+          ¿Tiene algún costo participar con un stand?
+        </button>
+        <button onclick="askQuestion('llevar')" class="w-full text-left text-xs bg-slate-100 hover:bg-brand-green hover:text-white text-slate-700 font-medium p-2 rounded-xl transition-all border border-slate-200">
+          ¿Qué debo llevar el día del evento?
+        </button>
+        <button onclick="askQuestion('donde')" class="w-full text-left text-xs bg-slate-100 hover:bg-brand-green hover:text-white text-slate-700 font-medium p-2 rounded-xl transition-all border border-slate-200">
+          ¿Lugar y Horario del evento?
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Botón Flotante para Abrir Chatbot -->
+    <button onclick="toggleChatbot()" class="bg-brand-green hover:bg-[#007a33] text-white p-4 rounded-full shadow-2xl transition-all flex items-center justify-center border-2 border-brand-yellow group scale-100 hover:scale-110">
+      <i data-lucide="message-circle" class="w-7 h-7"></i>
+    </button>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    lucide.createIcons();
+
+    // Menú Móvil
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    }
+
+    // Formulario de Inscripción Local
+    const form = document.getElementById('registration-form');
+    const successMsg = document.getElementById('success-message');
+    if (form && successMsg) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        form.classList.add('hidden');
+        successMsg.classList.remove('hidden');
+      });
+    }
+
+    // Temporizador en tiempo real (Cierre de inscripciones: Miércoles 18 de Noviembre 23:59:59)
+    const deadline = new Date("Nov 18, 2026 23:59:59").getTime();
+
+    function updateTimer() {
+      const now = new Date().getTime();
+      const distance = deadline - now;
+
+      if (distance < 0) {
+        document.getElementById("timer-days").innerText = "00";
+        document.getElementById("timer-hours").innerText = "00";
+        document.getElementById("timer-minutes").innerText = "00";
+        document.getElementById("timer-seconds").innerText = "00";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("timer-days").innerText = days < 10 ? '0' + days : days;
+      document.getElementById("timer-hours").innerText = hours < 10 ? '0' + hours : hours;
+      document.getElementById("timer-minutes").innerText = minutes < 10 ? '0' + minutes : minutes;
+      document.getElementById("timer-seconds").innerText = seconds < 10 ? '0' + seconds : seconds;
+    }
+
+    setInterval(updateTimer, 1000);
+    updateTimer();
+
+    // Lógica del Chatbot Flotante
+    const chatbotWindow = document.getElementById('floating-chatbot');
+    const chatMessages = document.getElementById('chat-messages');
+
+    function toggleChatbot() {
+      chatbotWindow.classList.toggle('hidden');
+    }
+
+    function appendMessage(sender, text) {
+      const isBot = sender === 'bot';
+      const msgDiv = document.createElement('div');
+      msgDiv.className = `flex items-start gap-2 ${isBot ? '' : 'flex-row-reverse'}`;
+      
+      msgDiv.innerHTML = `
+        <div class="w-7 h-7 rounded-full ${isBot ? 'bg-brand-blue text-white' : 'bg-brand-orange text-white'} flex items-center justify-center font-bold flex-shrink-0 text-[10px]">
+          ${isBot ? 'YS' : 'Tú'}
+        </div>
+        <div class="bg-${isBot ? 'white' : 'emerald-100'} p-3 rounded-2xl shadow-sm border border-slate-200 text-slate-700 max-w-[240px]">
+          ${text}
+        </div>
+      `;
+      chatMessages.appendChild(msgDiv);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function askQuestion(type) {
+      let qText = '';
+      let aText = '';
+
+      if (type === 'participar') {
+        qText = '¿Qué emprendimientos pueden participar?';
+        aText = 'Pueden participar emprendimientos de <strong>Gastronomía</strong> (Encocaos, dulces), <strong>Artesanías y Tejidos</strong>, <strong>Cosmética Natural</strong>, <strong>Agroindustria</strong> (Cacao, Coco) y todo tipo de ideas creativas locales.';
+      } else if (type === 'pequeno') {
+        qText = '¿Si soy un emprendimiento pequeño puedo participar?';
+        aText = '¡Sí, por supuesto que puedes participar! La feria <strong>Yo Soy Esmeraldas</strong> está diseñada especialmente para impulsar a pequeños y nuevos emprendedores locales a dar a conocer sus marcas y conectar con más clientes.';
+      } else if (type === 'hasta_cuando') {
+        qText = '¿Hasta cuándo me puedo inscribir?';
+        aText = 'Las inscripciones están abiertas hasta el <strong>miércoles 18 de noviembre</strong>. ¡Te recomendamos postular cuanto antes ya que los cupos para stands son limitados!';
+      } else if (type === 'costo') {
+        qText = '¿Tiene algún costo participar con un stand?';
+        aText = 'La postulación e inscripción previa es <strong>totalmente gratuita</strong>. Nuestro equipo evaluará los datos enviando confirmación a los seleccionados.';
+      } else if (type === 'llevar') {
+        qText = '¿Qué debo llevar el día del evento?';
+        aText = 'Debes traer tus productos listos para exhibir, material de contacto (tarjetas o redes) y menaje personal para atender tu stand.';
+      } else if (type === 'donde') {
+        qText = '¿Lugar y Horario del evento?';
+        aText = 'Te esperamos el <strong>Domingo 22 de Noviembre</strong> desde las <strong>10:00 AM</strong> en el <strong>Malecón Las Palmas</strong> (Plus Code: X8RR+3HV).';
+      }
+
+      appendMessage('user', qText);
+      setTimeout(() => {
+        appendMessage('bot', aText);
+      }, 400);
+    }
+  </script>
+</body>
+</html>
